@@ -44,7 +44,6 @@ except Exception as e:
 
 # Do this like following file manipulations to allow file editing
 with open(file_path, "r+") as td_file:
-    #td_file = open("C:/Users/kyles/OneDrive/Desktop/TrendTweeter Resources/TweetData.json")
     data = json.load(td_file)
     print("Printing full json...")
     print(data)
@@ -133,9 +132,3 @@ with open(file_path, "r") as h:
     h.close()
 
 exit()
-
-# Send out a tweet
-#api.update_status("this is a test tweet. Today's topic is: " + currTopic)
-
-#newTweet = api.update_status("this is a test tweet. Today's topic is: " + currTopic)
-#print("Sent the following tweet:\n" + newTweet)
