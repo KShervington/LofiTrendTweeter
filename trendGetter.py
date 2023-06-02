@@ -42,19 +42,9 @@ except Exception as e:
     print(e)
     exit()
 
-# Do this like following file manipulations to allow file editing
+# Do this following file manipulations to allow file editing
 with open(file_path, "r+") as td_file:
     data = json.load(td_file)
-    print("Printing full json...")
-    print(data)
-    print()
-    print("Printing just \"Previous Topic\"...")
-    print(data['Trend Topic'])
-    print()
-    print("Printing just \"Picture Number\"...")
-    print(data['Picture Number'])
-    print()
-    print("Changing \"Picture Number\" to 52 and printing...")
     data["Picture Number"] = data['Picture Number'] + 1
 
     td_file.seek(0)
